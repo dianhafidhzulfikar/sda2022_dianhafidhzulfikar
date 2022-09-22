@@ -1,17 +1,26 @@
 package pertemuan1;
 
 public class LoopArray {
-  public static void main(String[] args) {
-    int[] array1 = { 20, 23, 34, 56, 32, 12, 34, 43, 67, 65 };
-    // looping standar
-    // System.out.println("looping standard");
-    // for (int i = 0; i < 10; i++) {
-    // System.out.println("index ke-" + i + " adalah = " + arrayAngka[i]);
-    // }
-    System.out.println("looping standar");
-    for (int index = 0; index < array1.length; index++) {
-      System.out.println("index ke-1" + index + "adalah = " + array1[index]);
 
+  public static void main(String[] args) {
+    int[] arrayAngka = { 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+
+    // looping standard
+    System.out.println("looping standard");
+    for (int i = 0; i < 10; i++) {
+      System.out.println("index ke-" + i + " adalah = " + arrayAngka[i]);
+    }
+
+    // looping dengan properti array
+    System.out.println("looping dengan properti length");
+    for (int i = 0; i < arrayAngka.length; i++) {
+      System.out.println("index ke-" + i + " adalah = " + arrayAngka[i]);
+    }
+
+    // looping khususon untuk collection <- array
+    System.out.println("looping for each");
+    for (int angka : arrayAngka) {
+      System.out.println("angka pada looping ini = " + angka);
     }
 
   }
