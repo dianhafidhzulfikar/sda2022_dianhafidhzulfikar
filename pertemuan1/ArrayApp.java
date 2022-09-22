@@ -1,17 +1,12 @@
-package sda2022_dianhafidhzulfikar;
+package pertemuan1;
 
-import java.io.*;
-
-class ArrayApp {
-  public static void main(String[] args) throws IOException {
+public class ArrayApp {
+  public static void main(String[] args) {
     int[] arr; // reference
     arr = new int[100]; // make array
     int nElems = 0; // number of items
     int j; // loop counter
     int searchKey; // key of item to search for
-
-    // -------------------------------------------------------------
-
     arr[0] = 77; // insert 10 items
     arr[1] = 99;
     arr[2] = 44;
@@ -28,7 +23,6 @@ class ArrayApp {
       System.out.print(arr[j] + " ");
     System.out.println("");
     // -------------------------------------------------------------
-
     searchKey = 66; // find item with key 66
     for (j = 0; j < nElems; j++) // for each element,
       if (arr[j] == searchKey) // found item?
@@ -37,20 +31,17 @@ class ArrayApp {
       System.out.println("Can't find " + searchKey); // yes
     else
       System.out.println("Found " + searchKey); // no
-
     // -------------------------------------------------------------
-
     searchKey = 55; // delete item with key 55
     for (j = 0; j < nElems; j++) // look for it
       if (arr[j] == searchKey)
         break;
-    for (int k = j; k < nElems; k++) // move higher ones down
+    for (int k = j; k < nElems; k++) // move higher onesdown
       arr[k] = arr[k + 1];
     nElems--; // decrement size
     // -------------------------------------------------------------
-
     for (j = 0; j < nElems; j++) // display items
       System.out.print(arr[j] + " ");
     System.out.println("");
-  } // end main()
-} // end class ArrayApp
+  }
+}
